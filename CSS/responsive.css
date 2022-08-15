@@ -1,0 +1,18 @@
+ @media only screen and (max-width: 800px) {
+     .sing-up {
+         flex-direction: column;
+     }
+     .main-container {
+         width: 90vw;
+         padding: 10px 0px;
+     }
+     .left-content img {
+         width: 60%;
+     }
+     .capchaResult {
+         width: 30px;
+     }
+     .left-content {
+         max-width: 100%;
+     }
+ }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/responsive.css" />
+    <script src="JavaScript/script.js" defer></script>
+    <title>Form Validation</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="main-container">
+        <!-- singUp -->
+        <div id="singup" class="sing-up">
+          <div class="left-content">
+            <div class="theme-container">
+              <div class="theme Light" id="light"></div>
+              <div class="theme" id="dark"></div>
+            </div>
+
+            <h2>Hello There</h2>
+
+            <p>welcome on the bord</p>
+            <p>This is an basic HTML Form validation Using Vanila js</p>
+
+            <img src="images/home-illustration-01.webp" alt="" />
+          </div>
+
+          <div class="form-container">
+            <form action="#" id="singupForm">
+              <p class="instruction">
+                Usernames can only have: (A-Z),(a-z),(0-9).(dot),(Underscore)
+              </p>
+              <input type="text" id="name" placeholder=" Enter your Name" />
+              <input type="email" id="email" placeholder=" Enter your Email" />
+              <p class="instruction">
+                Password must be learger than 4 and shorter Than 12 (character)
+              </p>
+              <input
+                type="password"
+                id="password"
+                placeholder=" Enter your Password"
+              />
+              <input
+                type="password"
+                id="password2"
+                placeholder=" Confirm your Password"
+              />
+              <div class="capcha">
+                <div class="numbers">
+                  <h2 id="one"></h2>
+                  <div>+</div>
+                  <h2 id="two"></h2>
+                </div>
+
+                <input
+                  id="result"
+                  class="capchaResult"
+                  type="number"
+                  placeholder=" Insert Result"
+                />
+                <!-- <button class="submit-btn small" id="capchaBtn">Submit</button> -->
+              </div>
+
+              <button type="submit" id="submit" class="submit-btn">
+                Sing Up
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="namePopup" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/Sumit Saha Sir.jfif" alt="" />
+        </div>
+        <div class="content">
+          <h3>
+            The Great Teacher
+            <a href="https://github.com/learnwithsumit">Sumit Saha </a>Once Said
+            :
+          </h3>
+          <p style="font-size: 20px; font-weight: bolder">
+            "Never Trust Your User"
+          </p>
+          <h3 class="border">Please Fill Up the Name Feild</h3>
+
+          <button id="closePopup" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- password error -->
+    <div id="passwordPopup" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/Sumit Saha Sir.jfif" alt="" />
+        </div>
+        <div class="content">
+          <h3>
+            The Great Teacher
+            <a href="https://github.com/learnwithsumit">Sumit Saha </a>Once Said
+            :
+          </h3>
+          <p>Never Trust Your User</p>
+          <h3 class="border">PLease Enter exact same password in both Feild</h3>
+          <button id="closePopup2" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- password sort -->
+
+    <div id="passwordSortPopup" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/Sumit Saha Sir.jfif" alt="" />
+        </div>
+        <div class="content">
+          <h3>
+            The Great Teacher
+            <a href="https://github.com/learnwithsumit">Sumit Saha </a>Once Said
+            :
+          </h3>
+          <p>Never Trust Your User</p>
+          <h3 class="border">
+            Password must be learger than 4 and shorter Than 12 (character)
+          </h3>
+          <button id="closePopup3" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- thank you -->
+
+    <div id="ThankYou" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/thank you.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Wow.</h3>
+          <p>You Have Done it very Well,</p>
+          <h3 class="border">Thank You For Visit</h3>
+          <h3>Your Submited Info:</h3>
+          <div class="username">User Name: <span id="successUser"></span></div>
+          <div class="Email">Email: <span id="successEmail"></span></div>
+          <div class="Password">
+            Password: <span id="successPassword"></span>
+          </div>
+          <button id="Thanks" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- capcha first -->
+
+    <div id="capchaFirst" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/confused.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>Sorry</h3>
+          <p>Please Note</p>
+          <h3 class="border">You Have FullFill The Capcha First</h3>
+          <button id="chapchaFirstBtn" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- wromg capcha -->
+    <div id="capchaError" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/confused.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>OPs!</h3>
+          <p>you Have Miss Calculate It</p>
+          <h3 class="border">Take a look and try again</h3>
+          <button id="chapchaErrorBtn" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+    <!-- regErorr -->
+    <div id="RegExpError" class="nameError">
+      <div class="card">
+        <div class="imge">
+          <img class="card-Image" src="images/confused.jpg" alt="" />
+        </div>
+        <div class="content">
+          <h3>OPs!</h3>
+          <p>UserName is Not Valid!</p>
+          <h3 class="border">Take a look at the instruction and try again</h3>
+          <button id="RegExpErrorBtn" class="submit-btn">Close Popup</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h4>
+      Made with Love by
+      <a href="https://shariarmozumder.netlify.app">Shariar</a>
+    </h4>
+  </footer>
+</html>
